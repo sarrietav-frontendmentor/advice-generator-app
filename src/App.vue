@@ -20,9 +20,13 @@
       />
     </picture>
     <button
-      class="rounded-full flex justify-center items-center bg-emerald-400 p-5 -mb-[3.75rem] mt-2"
+      class="rounded-full flex justify-center items-center bg-emerald-400 p-5 -mb-[3.75rem] mt-2 hover:shadow-emerald-300 hover:shadow-[0_0_20px_2px] active:shadow-emerald-300 active:shadow-[0_0_15px_2px] transition-all group"
     >
-      <img src="./assets/icon-dice.svg" alt="Dice icon" />
+      <img
+        src="./assets/icon-dice.svg"
+        alt="Dice icon"
+        class="group-hover:animate-spin transition-all group-active:animate-spin-shrink"
+      />
     </button>
   </main>
 </template>
