@@ -1,9 +1,13 @@
 <template>
   <main
-    class="bg-slate-600 my-auto mx-0 flex flex-col items-center text-center gap-5 px-3 py-7"
+    class="relative rounded-xl bg-gray-700 my-auto mx-0 flex flex-col items-center text-center gap-6 px-4 py-7"
   >
-    <header class="text-emerald-500 text-sm">Advice # 117</header>
-    <blockquote class="text-white">
+    <header class="uppercase tracking-[.15em] text-emerald-500 text-xs">
+      Advice # 117
+    </header>
+    <blockquote
+      class="text-white text-xl before:content-['“'] after:content-['”']"
+    >
       It is easy to sit up and take notice, what's difficult is getting up and
       taking action.
     </blockquote>
@@ -15,7 +19,9 @@
         media="(min-width: 1024px)"
       />
     </picture>
-    <button>
+    <button
+      class="rounded-full flex justify-center items-center bg-emerald-400 p-5 -mb-[3.75rem] mt-2"
+    >
       <img src="./assets/icon-dice.svg" alt="Dice icon" />
     </button>
   </main>
