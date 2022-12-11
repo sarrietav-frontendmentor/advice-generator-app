@@ -1,7 +1,9 @@
 <template>
-  <main class="bg-slate-500">
-    <header>Advice # 117</header>
-    <blockquote>
+  <main
+    class="bg-slate-600 my-auto mx-0 flex flex-col items-center text-center gap-5 px-3 py-7"
+  >
+    <header class="text-emerald-500 text-sm">Advice # 117</header>
+    <blockquote class="text-white">
       It is easy to sit up and take notice, what's difficult is getting up and
       taking action.
     </blockquote>
