@@ -8,8 +8,7 @@
     <blockquote
       class="text-white text-xl before:content-['“'] after:content-['”'] px-4"
     >
-      It is easy to sit up and take notice, what's difficult is getting up and
-      taking action.
+      {{ quote }}
     </blockquote>
     <picture>
       <img src="./assets/pattern-divider-mobile.svg" alt="Divider" />
@@ -20,6 +19,7 @@
       />
     </picture>
     <button
+      @click="fetchQuote"
       class="rounded-full flex justify-center items-center bg-emerald-400 p-5 -mb-[3.75rem] mt-2 hover:shadow-emerald-300 hover:shadow-[0_0_20px_2px] active:shadow-emerald-300 active:shadow-[0_0_15px_2px] transition-all group"
     >
       <img
@@ -30,3 +30,19 @@
     </button>
   </main>
 </template>
+
+<script lang="ts" setup>
+import axios from "axios";
+import { onMounted, ref } from "vue";
+
+const quote = ref("");
+
+onMounted(() => {
+  fetchQuote();
+});
+
+const fetchQuote = async () => {
+  const response = await axios.get("https://api.adviceslip.com/advice");
+  quote.value = response.data.slip.advice;
+};
+</script>
